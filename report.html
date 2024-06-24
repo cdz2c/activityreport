@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone 2 Youth Choir Activity Report</title>
+    <style>
+        body, html {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 0 auto; /* Center align the container */
+        }
+        .section-title {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .emoji {
+            cursor: pointer;
+            margin-right: 5px; /* Reduced margin to bring emoji closer */
+        }
+        .name {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            white-space: nowrap; /* Ensures name stays on one line */
+        }
+        .name .text {
+            margin-right: 10px; /* Adjust margin between text and emoji */
+        }
+        .reason {
+            display: none;
+            margin-left: 5px; /* Adjusted margin for spacing */
+            flex-grow: 1;
+        }
+        .input-field {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .input-field label {
+            min-width: 100px;
+        }
+        .input-field input {
+            flex-grow: 1;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .submit-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .submit-button button {
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>🚨 Zone 2 Youth Choir Activity Report 🚨</h3>
+        <div class="input-field">
+            <label for="event">🎹 Event:</label>
+            <div id="event">"EVENT"</div>
+        </div>
+        <div class="input-field">
+            <label for="venue">📍 Venue:</label>
+            <div id="venue">"VENUE"</div>
+        </div>
+        <div class="input-field">
+            <label for="date">🗓️ Date:</label>
+            <div id="date">"DATE"</div>
+        </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        
+        <div id="report">
+            <h2 class="section-title">Z2C</h2>
+
+            <div class="name z2c" id="s-joyce">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(S) S. Joyce</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="s-diana">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(S) S. Diana</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="s-josie">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(S) S. Josie</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="a-camille">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(A) S. Camille</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="a-reg">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(A) S. Reg</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="a-reyma">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(A) S. Reyma</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="t-roy">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(T) B. Roy</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="t-donnie">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(T) B. Donnie</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="t-jance">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(T) B. Jance</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="t-erick">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(T) B. Erick</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="t-kristen">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(T) B. Kristen</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <div class="name z2c" id="b-dabid">
+                <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+                <span class="text">(B) B. Dabid</span>
+                <input type="text" class="reason" placeholder="Reason">
+            </div>
+            <!-- Add more names similarly -->
+
+            <h2 class="section-title">Z2LC</h2>
+<div class="name z2lc" id="s-ec-jude">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(S) EC Jude</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="s-ec-jasmine">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(S) EC Jasmine</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="s-et-margaret">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(S) ET Margaret</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="s-et-analine">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(S) ET Analine</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="a-ca-jenalyn">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(A) CA Jenalyn</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="a-knl-mercy">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(A) KNL Mercy</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="t-et-james">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(T) ET James</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="t-pt-joel">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(T) PT Joel</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="t-ca-jasper">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(T) CA Jasper</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="t-ec-kyle">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(T) EC Kyle</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="t-et-matt">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(B) ET Matt</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="t-ec-collen">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(B) EC Collen</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="b-ec-benedict">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(B) EC Benedict</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name z2lc" id="b-ec-angelo">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(B) EC Angelo</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+            <!-- Add more names similarly -->
+
+            <h2 class="section-title">Other Locale</h2>
+<div class="name other" id="s-angeline">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(S) S. Angeline</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name other" id="s-francesca">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(S) S. Francesca</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name other" id="a-aby">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(A) S. Aby</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+    <div class="name other" id="b-ezekiel">
+        <span class="emoji" onclick="toggleEmoji(this)">❓</span>
+        <span class="text">(B) B. Ezekiel</span>
+        <input type="text" class="reason" placeholder="Reason">
+    </div>
+            <!-- Add more names similarly -->
+        </div>
+    </div>
+
+    <script>
+        function toggleEmoji(element) {
+            const reasonInput = element.parentElement.querySelector('.reason');
+            if (element.textContent === '❓') {
+                element.textContent = '✅';
+                reasonInput.style.display = 'none';
+                reasonInput.value = '';
+            } else if (element.textContent === '✅') {
+                element.textContent = '❎';
+                reasonInput.style.display = 'block';
+            } else if (element.textContent === '❎') {
+                element.textContent = '❓';
+                reasonInput.style.display = 'none';
+                reasonInput.value = '';
+            }
+        }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch latest activity report data
+    fetch('http://localhost/fetch_latest_activity.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                // Populate event, venue, and date fields
+                document.getElementById('event').textContent = data.event;
+                document.getElementById('venue').textContent = data.venue;
+                document.getElementById('date').textContent = data.date;
+                if(data.data){
+                populateForm(data.data);
+                }
+            } else {
+                console.error('Failed to fetch latest activity:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching latest activity:', error);
+        });
+});
+
+function submitForm() {
+    // Initialize an object to store all form data
+    let formData = {};
+
+    // Add event, venue, and date to formData
+    formData.event = document.getElementById('event').textContent.trim();
+    formData.venue = document.getElementById('venue').textContent.trim();
+    formData.date = document.getElementById('date').textContent.trim();
+
+    // Initialize arrays to store formatted data for each category
+    formData.z2c = [];
+    formData.z2lc = [];
+    formData.otherLocale = [];
+
+    // Query all names with different category classes
+    const namesZ2C = document.querySelectorAll('.name.z2c');
+    const namesZ2LC = document.querySelectorAll('.name.z2lc');
+    const namesOtherLocale = document.querySelectorAll('.name.other');
+
+    // Process names in Z2C category
+    namesZ2C.forEach(name => {
+        const id = name.id;
+        const emoji = name.querySelector('.emoji').textContent.trim();
+        const text = name.querySelector('.text').textContent.trim();
+        const reason = name.querySelector('.reason').value.trim();
+
+        // Format the data
+        const formattedData = {
+            id: id,
+            emoji: emoji,
+            text: text,
+            reason: reason
+        };
+
+        // Push formatted data into z2c array
+        formData.z2c.push(formattedData);
+    });
+
+    // Process names in Z2LC category
+    namesZ2LC.forEach(name => {
+        const id = name.id;
+        const emoji = name.querySelector('.emoji').textContent.trim();
+        const text = name.querySelector('.text').textContent.trim();
+        const reason = name.querySelector('.reason').value.trim();
+
+        // Format the data
+        const formattedData = {
+            id: id,
+            emoji: emoji,
+            text: text,
+            reason: reason
+        };
+
+        // Push formatted data into z2lc array
+        formData.z2lc.push(formattedData);
+    });
+
+    // Process names in Other Locale category
+    namesOtherLocale.forEach(name => {
+        const id = name.id;
+        const emoji = name.querySelector('.emoji').textContent.trim();
+        const text = name.querySelector('.text').textContent.trim();
+        const reason = name.querySelector('.reason').value.trim();
+
+        // Format the data
+        const formattedData = {
+            id: id,
+            emoji: emoji,
+            text: text,
+            reason: reason
+        };
+
+        // Push formatted data into otherLocale array
+        formData.otherLocale.push(formattedData);
+    });
+
+    // Log formData for testing
+    console.log(formData);
+
+    // Convert formData to JSON string
+    const jsonData = JSON.stringify(formData);
+
+    // Send formData to PHP backend using fetch
+    fetch('submit_data.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: jsonData,
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log('Response:', data);
+        // Optionally handle response here
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+ function populateForm(data) {
+                // Populate Z2C section
+                existingData = JSON.parse(data)
+                existingData.z2c.forEach(member => {
+                    const memberElement = document.getElementById(member.id);
+                    if (memberElement) {
+                        memberElement.querySelector('.emoji').textContent = member.emoji;
+                        memberElement.querySelector('.reason').value = member.reason || '';
+                        updateReason(member, memberElement)
+                    }
+                });
+
+                // Populate Z2LC section
+                existingData.z2lc.forEach(member => {
+                    const memberElement = document.getElementById(member.id);
+                    if (memberElement) {
+                        memberElement.querySelector('.emoji').textContent = member.emoji;
+                        memberElement.querySelector('.reason').value = member.reason || '';
+                        updateReason(member, memberElement)
+                    }
+                });
+
+                // Populate Other Locale section
+                existingData.otherLocale.forEach(member => {
+                    const memberElement = document.getElementById(member.id);
+                    if (memberElement) {
+                        memberElement.querySelector('.emoji').textContent = member.emoji;
+                        memberElement.querySelector('.reason').value = member.reason || '';
+                        updateReason(member, memberElement)
+                    }
+                });
+            }
+
+    function updateReason(member, memberElement){
+        if (member.emoji == '❎'){
+        const reasonInput = memberElement.querySelector('.reason');
+        reasonInput.style.display = 'block';
+        reasonInput.value = member.reason;
+        }
+    }
+
+    </script>
+</body>
+</html>
